@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 //작성된 컴포넌트를 불러들인다.
 import TodaysPlan from './03/1.TodaysPlan';
 import PropsComponent from './03/2.PropsComponent';
-import ChildComponent from './03/3.ChildComponent'
+import ChildComponent from './03/3.ChildComponent';
+import BooleanComponent from './03/4.BooleanComponent';
 
 class App extends Component {
   render() {
@@ -18,6 +19,12 @@ class App extends Component {
             nodeValue={<h1>노드</h1>}
             funcValue={() => {console.log('메시지')} }
           />
+
+        <div>
+          <div><b>지루할 때:</b><BooleanComponent bored/></div>
+          <div><b>즐거울 때:</b><BooleanComponent /></div>
+        </div>
+
       </div>
     );
   }
