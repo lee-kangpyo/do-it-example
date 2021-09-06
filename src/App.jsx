@@ -4,12 +4,13 @@ import TodaysPlan from './03/1.TodaysPlan';
 import PropsComponent from './03/2.PropsComponent';
 import ChildComponent from './03/3.ChildComponent';
 import BooleanComponent from './03/4.BooleanComponent';
+import ChildComponent2 from './03/5.ChildComponent2';
 
 class App extends Component {
   render() {
     return (
       <div className="body">
-        <TodaysPlan />
+        <TodaysPlan />ㅇ
         <PropsComponent name = "콤포넌트로 데이터 전달" />
         <ChildComponent
             boolValue={true}
@@ -24,6 +25,8 @@ class App extends Component {
           <div><b>지루할 때:</b><BooleanComponent bored/></div>
           <div><b>즐거울 때:</b><BooleanComponent /></div>
         </div>
+
+        <ChildComponent2 objValue = {{age:20}} requiredStringValue="문자"/>
 
       </div>
     );
