@@ -29,7 +29,9 @@ class ChildComponent extends React.Component {
 ChildComponent.propTypes = {
   boolValue: PropTypes.bool,
   numValue: PropTypes.number,
-  arrayValue: PropTypes.object,
+  arrayValue: PropTypes.arrayOf(
+      PropTypes.number
+    ),
   nodeValue: PropTypes.node,
   funcValue: PropTypes.func,
 }
