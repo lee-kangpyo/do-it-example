@@ -6,6 +6,7 @@ import ChildComponent from './03/3.ChildComponent';
 import BooleanComponent from './03/4.BooleanComponent';
 import ChildComponent2 from './03/5.ChildComponent2';
 import DefaultPropsComponent from './03/6.DefaultPropsComponent';
+import ChildProperty from './03/7.ChildProperty'
 
 class App extends Component {
   render() {
@@ -30,6 +31,11 @@ class App extends Component {
         <ChildComponent2 objValue = {{age:20}} requiredStringValue="문자"/>
 
         <DefaultPropsComponent />
+
+        <ChildProperty>
+          <div><span>자식노드</span></div>
+        </ChildProperty>
+
       </div>
     );
   }

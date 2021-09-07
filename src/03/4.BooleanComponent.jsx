@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 class BooleanComponent extends React.Component {
   render () {
