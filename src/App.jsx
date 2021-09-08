@@ -7,6 +7,7 @@ import BooleanComponent from './03/4.BooleanComponent';
 import ChildComponent2 from './03/5.ChildComponent2';
 import DefaultPropsComponent from './03/6.DefaultPropsComponent';
 import ChildProperty from './03/7.ChildProperty'
+import StateExample from './03/8.StateExample'
 
 class App extends Component {
   render() {
@@ -35,7 +36,7 @@ class App extends Component {
         <ChildProperty>
           <div><span>자식노드</span></div>
         </ChildProperty>
-
+        <StateExample />
       </div>
     );
   }
