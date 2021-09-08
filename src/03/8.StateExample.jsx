@@ -9,6 +9,7 @@ class StateExample extends React.Component {
       formData:'no data',
     }
     this.handleData = this.handleData.bind(this);
+    this.handleData2 = this.handleData2.bind(this);
     // 4초후 handleData 함수 호출됨
     setTimeout(this.handleData2, 4000);
   }
@@ -18,8 +19,8 @@ class StateExample extends React.Component {
     const {formData} = this.state;
 
     this.setState ({
-      loading:false,
-      formData:data+formData,
+      loading : false,
+      formData : data + formData,
     });
     console.log("loading : " + this.state.loading);
   }
@@ -27,10 +28,14 @@ class StateExample extends React.Component {
   handleData2(){
     const data = "new Data";
 
-    this.setState (function(prevState){
-      loading:false,
-      formData:data+prevState.formData,
-    });
+    this.setState (function(prevState) {
+        const newState = {
+          loading : false,
+          formData : data + prevState.formData
+        }
+        return newState;
+      }
+    );
     console.log("loading : " + this.state.loading);
   }
 
