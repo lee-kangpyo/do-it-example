@@ -8,6 +8,7 @@ import ChildComponent2 from './03/5.ChildComponent2';
 import DefaultPropsComponent from './03/6.DefaultPropsComponent';
 import ChildProperty from './03/7.ChildProperty'
 import StateExample from './03/8.StateExample'
+import ForceUpdate from './03/9.ForceUpdateExample'
 
 class App extends Component {
   render() {
@@ -37,6 +38,7 @@ class App extends Component {
           <div><span>자식노드</span></div>
         </ChildProperty>
         <StateExample />
+        <ForceUpdate />
       </div>
     );
   }
