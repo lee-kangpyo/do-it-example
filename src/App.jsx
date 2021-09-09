@@ -6,11 +6,26 @@ import ChildComponent from './03/3.ChildComponent';
 import BooleanComponent from './03/4.BooleanComponent';
 import ChildComponent2 from './03/5.ChildComponent2';
 import DefaultPropsComponent from './03/6.DefaultPropsComponent';
-import ChildProperty from './03/7.ChildProperty'
-import StateExample from './03/8.StateExample'
-import ForceUpdate from './03/9.ForceUpdateExample'
+import ChildProperty from './03/7.ChildProperty';
+import StateExample from './03/8.StateExample';
+import ForceUpdate from './03/9.ForceUpdateExample';
+import LifeCycleExample from './03/10.LifeCycleExample';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      hasDestroyed : false,
+    }
+  }
+
+  componentDidMount(){
+    this.setState({
+      hasDestroyed : true,
+    })
+  }
+
   render() {
     return (
       <div className="body">
@@ -39,6 +54,11 @@ class App extends Component {
         </ChildProperty>
         <StateExample />
         <ForceUpdate />
+        <div>
+          {this.state.hasDestroyed ? null : <LifeCycleExample />}
+        </div>
+
+
       </div>
     );
   }
