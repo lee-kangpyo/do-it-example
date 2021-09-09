@@ -10,6 +10,9 @@ import ChildProperty from './03/7.ChildProperty';
 import StateExample from './03/8.StateExample';
 import ForceUpdate from './03/9.ForceUpdateExample';
 import LifeCycleExample from './03/10.LifeCycleExample';
+import Counter from './03/11.Counter';
+import NewCounter from './03/12.newCounter';
+import ListExample from './03/13.ListExample';
 
 class App extends Component {
 
@@ -17,13 +20,19 @@ class App extends Component {
     super(props);
     this.state = {
       hasDestroyed : false,
+      count:10,
     }
+    this.resetCount = this.resetCount.bind(this)
   }
 
   componentDidMount(){
     this.setState({
       hasDestroyed : true,
     })
+  }
+
+  resetCount(){
+    this.setState(({ count }) => ({count : count + 10}));
   }
 
   render() {
@@ -58,6 +67,11 @@ class App extends Component {
           {this.state.hasDestroyed ? null : <LifeCycleExample />}
         </div>
 
+        <div>
+          <div><Counter count={this.state.count} /></div>
+          <div><NewCounter count={this.state.count} /></div>
+          <button onClick = {this.resetCount}>{this.state.count + 10}으로 초기화</button>
+        </div>
 
       </div>
     );
