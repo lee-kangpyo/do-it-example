@@ -14,6 +14,7 @@ import Counter from './03/11.Counter';
 import NewCounter from './03/12.newCounter';
 import ListExample from './03/13.ListExample';
 import TodoList from './03/14.TodoList';
+import Counter2 from './03/15.Counter2';
 
 class App extends Component {
 
@@ -34,6 +35,10 @@ class App extends Component {
 
   resetCount(){
     this.setState(({ count }) => ({count : count + 10}));
+  }
+
+  increaseCount() {
+    this.setState( ({ count }) => ({ count : count + 1 }) )
   }
 
   render() {
@@ -76,6 +81,7 @@ class App extends Component {
 
         <ListExample />
         <TodoList />
+        <Counter2 count = {this.state.count} onAdd={this.increaseCount.bind(this)} />
       </div>
     );
   }
