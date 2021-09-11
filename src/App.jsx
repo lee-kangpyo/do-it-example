@@ -15,6 +15,8 @@ import NewCounter from './03/12.newCounter';
 import ListExample from './03/13.ListExample';
 import TodoList from './03/14.TodoList';
 import Counter2 from './03/15.Counter2';
+import Counter3 from './03/17.Counter3';
+
 
 class App extends Component {
 
@@ -82,6 +84,7 @@ class App extends Component {
         <ListExample />
         <TodoList />
         <Counter2 count = {this.state.count} onAdd={this.increaseCount.bind(this)} />
+        <Counter3 />
       </div>
     );
   }
