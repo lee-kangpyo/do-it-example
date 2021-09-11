@@ -50,27 +50,28 @@ class Input extends PureComponent {
       </label>
     )
   }
-
-  Input.PropTypes = {
-    type : PropTypes.onOf(["text", "number", "price"]),
-    name : PropTypes.string.isRequired,
-    value : PropTypes.onOfType([PropTypes.number, PropTypes.string]),
-    errorMessage : PropTypes.string,
-    label : PropTypes.string,
-    onChange : PropTypes.func,
-    onFocus : PropTypes.func,
-    autoFocus : PropTypes.bool,
-  };
-
-  Input.defaultProps = {
-    onChange:(){},
-    onFocus:(){},
-    autoFocus:false,
-    trpe:"text"
-  }
-
-
-
 }
+
+Input.propTypes = {
+  type : PropTypes.oneOf(["text", "number", "price"]),
+  name : PropTypes.string.isRequired,
+  value : PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  errorMessage : PropTypes.string,
+  label : PropTypes.string,
+  onChange : PropTypes.func,
+  onFocus : PropTypes.func,
+  autoFocus : PropTypes.bool,
+};
+
+Input.defaultProps = {
+  onChange:() => {},
+  onFocus:() => {},
+  autoFocus:false,
+  trpe:"text"
+}
+
+
+
+
 
 export default Input;
