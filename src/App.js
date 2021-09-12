@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/materialize.scss'
+import './scss/materialize.scss'
 import './App.css'
 
 class App extends React.Component {
