@@ -23,7 +23,7 @@
     "selector-action": "^1.1.1"
   },
   "scripts": {
-    "storybook":"start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,8 +41,8 @@
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
+    "@storybook/addon-actions": "5.2.6",
+    "@storybook/addons": "5.2.6",
     "@storybook/react": "5.2.6",
     "aphrodite": "^2.2.3",
     "babel-loader": "^8.0.5",
@@ -51,6 +51,6 @@
     "react-with-styles-interface-aphrodite": "^5.0.1",
     "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.1.0",
-    "storybook-addon-jsx": "^7.1.13"
+    "storybook-addon-jsx": "7.1.13"
   }
 }

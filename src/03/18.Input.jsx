@@ -8,7 +8,7 @@ class Input extends PureComponent {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange () {
+  handleChange (e) {
     const { name, onChange } = this.props;
     if(onChange){
       onChange(name, e.target.value);
