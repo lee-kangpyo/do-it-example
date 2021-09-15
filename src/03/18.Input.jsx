@@ -67,7 +67,7 @@ Input.defaultProps = {
   onChange:() => {},
   onFocus:() => {},
   autoFocus:false,
-  trpe:"text"
+  type:"text"
 }
 
 
