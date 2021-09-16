@@ -35,6 +35,16 @@ describe('<Input> 기본', () => {
     expect(wrapper.html()).toContain(expectedErrorMessage);
   });
 
+  it("calls back onChange input change", ()=>{
+    const changeStub = jest.fn();
+    const wrapper = shallow(<Input name="test_name" onChange={changeStub} />);
+    expect(changeStub).not.toHaveBeenCalled();
+    const expectedTargetValue = 'updated input';
+    wrapper.find("input").simulate("change", {target:{value:expectedTargetValue}});
+    expect(changeStub).toHaveBeenCalledTimes(1)
+    expect(changeStub).toHaveBeenCalledWith('test_name', expectedTargetValue);
+  });
+
 });
 
 describe('<input> 가져야 할 요소', () => {
