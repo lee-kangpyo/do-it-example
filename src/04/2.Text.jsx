@@ -14,6 +14,7 @@ class Text extends PureComponent {
       primary,
       secondary,
      } = this.props;
+     
     return (
       <span { ...css(
               styles.default,
