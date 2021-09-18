@@ -16,7 +16,7 @@ class CheckBox extends PureComponent {
   }
 
   handleClick(e) {
-    const {name, onChange} = this.props;
+    const { name, onChange } = this.props;
     onChange(name, e.target.checked);
   }
 
@@ -32,7 +32,7 @@ class CheckBox extends PureComponent {
       styles,
       checked,
     } = this.props;
-    
+
     return (
       <label>
         {label}
@@ -41,7 +41,7 @@ class CheckBox extends PureComponent {
             ref={this.setRef}
             type="checkbox"
             checked={checked && 'checked'}
-            onClick={this.handelClick}
+            onClick={this.handleClick}
           />
           {children}
         </div>
