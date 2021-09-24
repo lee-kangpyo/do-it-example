@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function withLoading(WrappedComponent) {
+export default function withLoading(WrappedComponent, loadingMessage = "로딩 중") {
   const { displayName, name: componentName } = WrappedComponent;
   const WrappedComponentName = displayName || componentName;
 
-  function WithLoading(props){
-    if(props.isLoading) return '로딩중';
+  function WithLoading({isLoading, ...otherProps}){
+    if(isLoading) return loadingMessage;
 
     return (
-      <WrappedComponent {...props} />
+      <WrappedComponent {...otherProps} />
     );
   }
   WithLoading.displayName = `withLoading(${WrappedComponentName})`;
