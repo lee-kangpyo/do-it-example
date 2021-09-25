@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function withLoading(loadingMessage = "로딩 중") {
-  function withLoading(WrappedComponent){
+  return function withLoading(WrappedComponent){
     const { displayName, name: componentName } = WrappedComponent;
     const WrappedComponentName = displayName || componentName;
 
