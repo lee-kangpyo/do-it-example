@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import  BranchLoadingButton from '../05/branch';
+import  BranchLoadingButton from '../05/05-3-1.branch';
 
 storiesOf("Branch", module)
   .addWithJSX("기본 설정", () => <BranchLoadingButton>안녕하세요</BranchLoadingButton>)
