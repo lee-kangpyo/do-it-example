@@ -9,12 +9,13 @@ export default WrappedComponent => {
   function WithLoadingContext(props, context){
     const { loading, setLoading } = context;
     return (
-      <WrappedComponent {...props} loading = {loading}, setLoading={setLoading}/>
+      <WrappedComponent {...props} loading = {loading} setLoading={setLoading}/>
     );
   };
   WithLoadingContext.displayName = `withLoading(${WrappedComponentName})`;
   WithLoadingContext.contextTypes = {
-    loading:ProtoTypes.bool,
-    setLoading:ProtoTypes.func,
+    loading:PropTypes.bool,
+    setLoading:PropTypes.func,
   }
+  return WithLoadingContext;
 }

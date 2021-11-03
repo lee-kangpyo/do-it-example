@@ -27,9 +27,8 @@ class LoadingProvider extends React.Component {
 }
 
 LoadingProvider.childContextTypes = {
-  loading:ProtoTypes.bool,
-  setLoading:ProtoTypes.func,
+  loading:PropTypes.bool,
+  setLoading:PropTypes.func,
 }
-
 
 export default LoadingProvider;

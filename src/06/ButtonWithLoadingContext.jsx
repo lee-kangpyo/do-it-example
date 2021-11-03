@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttom from '../04/3.Button';
-import WithLoadingContext from './WithLoadingContext'
+import Button from '../04/3.Button';
+import WithLoadingContext from './withLoadingContext'
 
 function ButtonWithLoadingContext ( {loading, setLoading, label} ){
   return(
@@ -13,8 +13,8 @@ function ButtonWithLoadingContext ( {loading, setLoading, label} ){
 
 ButtonWithLoadingContext.propTypes = {
   label:PropTypes.string,
-  loading:ProtoTypes.bool,
-  setLoading:ProtoTypes.func,
+  loading:PropTypes.bool,
+  setLoading:PropTypes.func,
 }
 
 export default WithLoadingContext(ButtonWithLoadingContext);

@@ -1,7 +1,7 @@
-import React from 'react'
-import ButtonWithLoadingContext from './ButtonWithLoadingContext'
-import LoadingProvider from '../LoadingProvider'
-import Button from './04/3.Button' // 소비자
+import React, { PureComponent } from 'react';
+import LoadingProvider from './LoadingProvider';
+import ButtonWithLoadingContext from './ButtonWithLoadingContext';
+import Button from '../04/3.Button' // 소비자
 
 function RowBComponent(){
   return <Button>버튼</Button>
@@ -9,7 +9,8 @@ function RowBComponent(){
 
 function RowCComponent(){
   //소비자를 출력한다.
-  return <ButtonWithContext>버튼</ButtonWithContext>
+  //return <ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>
+  return <ButtonWithLoadingContext label="버튼" />;
 }
 
 function TableComponent(){
@@ -26,8 +27,10 @@ class HomePageComponent extends PureComponent {
     return (
       <LoadingProvider>
         <TableComponent />
-        <ButtonWithLoadingContext label="상태변경" />
+        <ButtonWithLoadingContext label="상태 변경" />
       </LoadingProvider>
     );
   }
 }
+
+export default HomePageComponent;
